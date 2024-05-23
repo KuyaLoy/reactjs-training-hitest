@@ -1,4 +1,4 @@
-const Card = () => {
+const Card = ({ username = "Pogi Ng Coder", post = "not assigned yet" }) => {
   return (
     <div>
       <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
@@ -17,10 +17,8 @@ const Card = () => {
             </p>
           </blockquote>
           <figcaption className="font-medium">
-            <div className="text-sky-500 dark:text-sky-400">Sarah Dayan</div>
-            <div className="text-slate-700 dark:text-slate-500">
-              Staff Engineer, Algolia
-            </div>
+            <div className="text-sky-500 dark:text-sky-400">{username}</div>
+            <div className="text-slate-700 dark:text-slate-500">{post}</div>
           </figcaption>
         </div>
       </figure>
